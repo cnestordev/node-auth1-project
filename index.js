@@ -1,8 +1,6 @@
-const express = require('express')
-const app = express()
+const app = require('./api/server')
+const port = process.env.PORT || 8000
 
-app.use(express.json())
-
-
-
-module.exports = app
+app.listen(port, () => {
+    console.log(`running on port ${port}`)
+})
